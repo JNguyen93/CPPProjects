@@ -1,0 +1,1033 @@
+====== Summary ======
+make: *** [PHASE_A0_1.tst] Error 1
+make: *** [PHASE_A1_0.tst] Error 1
+make: *** [PHASE_A0_0.tst] Error 1
+make: *** [PHASE_B1_0.tst] Error 1
+make: *** [PHASE_B1_2.tst] Error 1
+make: *** [PHASE_B1_1.tst] Error 1
+make: *** [PHASE_B1_3.tst] Error 1
+make: *** [PHASE_AS0_0.tst] Error 1
+make: *** [PHASE_AS0_1.tst] Error 1
+make: *** [PHASE_AS0_2.tst] Error 1
+make: *** [PHASE_AS0_4.tst] Error 1
+make: *** [PHASE_AS0_3.tst] Error 1
+make: *** [PHASE_AS0_5.tst] Error 1
+make: *** [PHASE_BS1_0.tst] Error 1
+make: *** [PHASE_AS1_0.tst] Error 1
+make: *** [PHASE_BS1_1.tst] Error 1
+make: *** [PHASE_BS1_3.tst] Error 1
+make: *** [PHASE_BS1_2.tst] Error 1
+make: *** [PHASE_BS1_4.tst] Error 1
+make: *** [PHASE_BS1_5.tst] Error 1
+make: *** [PHASE_BS1_6.tst] Error 1
+make: *** [PHASE_BS1_7.tst] Error 1
+make: *** [PHASE_BS1_8.tst] Error 1
+make: *** [PHASE_BS1_9.tst] Error 1
+make: *** [PHASE_BS2_0.tst] Error 1
+
+======= Dump========
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_A0_1 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_A0_1.tst
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_A0_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_A0_0.tst
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_A1_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_A1_0.tst
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_PhaseA_unittests.cpp: In member function ‘virtual void PhaseA_BracketOp_Test::TestBody()’:
+Valarray_PhaseA_unittests.cpp:36:32: error: variable ‘epl::valarray<std::complex<double> > x’ has initializer but incomplete type
+     valarray<complex<double>> x(10);
+                                ^
+Valarray_PhaseA_unittests.cpp:41:31: error: variable ‘epl::valarray<std::complex<double> > y’ has initializer but incomplete type
+     valarray<complex<double>> y = x + x;
+                               ^
+Valarray_PhaseA_unittests.cpp:51:20: error: unable to deduce ‘auto&&’ from ‘x’
+     for (auto yi : x) {
+                    ^
+Valarray_PhaseA_unittests.cpp: In member function ‘virtual void PhaseA1_Complex_Test::TestBody()’:
+Valarray_PhaseA_unittests.cpp:74:31: error: variable ‘epl::valarray<std::complex<float> > x’ has initializer but incomplete type
+     valarray<complex<float>> x(10);
+                               ^
+Valarray_PhaseA_unittests.cpp:75:22: error: variable ‘epl::valarray<double> y’ has initializer but incomplete type
+     valarray<double> y = { 1.5, 2.5, 3.5 };
+                      ^
+Valarray_PhaseA_unittests.cpp:80:31: error: variable ‘epl::valarray<std::complex<double> > z’ has initializer but incomplete type
+     valarray<complex<double>> z = y + x;
+                               ^
+Valarray_PhaseA_unittests.cpp:81:31: error: variable ‘epl::valarray<std::complex<double> > r’ has initializer but incomplete type
+     valarray<complex<double>> r = y + y + z;
+                               ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseA_unittests.cpp:14:
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseA_unittests.cpp:82:5: note: in expansion of macro ‘EXPECT_EQ’
+     EXPECT_EQ(r[0], complex<double>(4.5, 0));
+     ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseA_unittests.cpp:83:5: note: in expansion of macro ‘EXPECT_EQ’
+     EXPECT_EQ(r[1], complex<double>(7.5, 0));
+     ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseA_unittests.cpp:84:5: note: in expansion of macro ‘EXPECT_EQ’
+     EXPECT_EQ(r[2], complex<double>(10.5, 0));
+     ^
+Valarray_PhaseA_unittests.cpp: In member function ‘virtual void PhaseA_Operators_Test::TestBody()’:
+Valarray_PhaseA_unittests.cpp:62:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(10);
+                    ^
+Valarray_PhaseA_unittests.cpp:63:20: error: variable ‘epl::valarray<int> y’ has initializer but incomplete type
+     valarray<int> y(20);
+                    ^
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Makefile:27: recipe for target 'PHASE_A0_1.tst' failed
+make: *** [PHASE_A0_1.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_B1_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_B1_0.tst
+Makefile:27: recipe for target 'PHASE_A1_0.tst' failed
+make: *** [PHASE_A1_0.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_B1_1 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_B1_1.tst
+Makefile:27: recipe for target 'PHASE_A0_0.tst' failed
+make: *** [PHASE_A0_0.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_B1_2 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_B1_2.tst
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_PhaseB_unittests.cpp: In member function ‘virtual void PhaseB1_Accumulate_Test::TestBody()’:
+Valarray_PhaseB_unittests.cpp:66:19: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1{1, 2, 3, 4, 5};
+                   ^
+Valarray_PhaseB_unittests.cpp: In member function ‘virtual void PhaseB1_Sqrt_Test::TestBody()’:
+Valarray_PhaseB_unittests.cpp:39:21: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1(10);
+                     ^
+Valarray_PhaseB_unittests.cpp:40:19: error: variable ‘epl::valarray<int> v4’ has initializer but incomplete type
+     valarray<int> v4 = 4 + v1;
+                   ^
+Valarray_PhaseB_unittests.cpp:42:21: error: variable ‘epl::valarray<float> v5’ has initializer but incomplete type
+     valarray<float> v5 = v4.sqrt();
+                     ^
+Valarray_PhaseB_unittests.cpp: In member function ‘virtual void PhaseB1_Apply_Test::TestBody()’:
+Valarray_PhaseB_unittests.cpp:51:21: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1(10);
+                     ^
+Valarray_PhaseB_unittests.cpp:52:19: error: variable ‘epl::valarray<int> v4’ has initializer but incomplete type
+     valarray<int> v4 = 4 + v1;
+                   ^
+Valarray_PhaseB_unittests.cpp:54:19: error: variable ‘epl::valarray<int> v7’ has initializer but incomplete type
+     valarray<int> v7 = v4.apply(std::negate<int>());
+                   ^
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Makefile:27: recipe for target 'PHASE_B1_0.tst' failed
+make: *** [PHASE_B1_0.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_B1_3 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_B1_3.tst
+Makefile:27: recipe for target 'PHASE_B1_2.tst' failed
+make: *** [PHASE_B1_2.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_AS0_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_AS0_0.tst
+Makefile:27: recipe for target 'PHASE_B1_1.tst' failed
+make: *** [PHASE_B1_1.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_AS0_1 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_AS0_1.tst
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_PhaseB_unittests.cpp: In member function ‘virtual void PhaseB1_Lazy_Test::TestBody()’:
+Valarray_PhaseB_unittests.cpp:77:23: error: aggregate ‘epl::valarray<double> v1’ has incomplete type and cannot be defined
+     valarray <double> v1, v2, v3, v4;
+                       ^
+Valarray_PhaseB_unittests.cpp:77:27: error: aggregate ‘epl::valarray<double> v2’ has incomplete type and cannot be defined
+     valarray <double> v1, v2, v3, v4;
+                           ^
+Valarray_PhaseB_unittests.cpp:77:31: error: aggregate ‘epl::valarray<double> v3’ has incomplete type and cannot be defined
+     valarray <double> v1, v2, v3, v4;
+                               ^
+Valarray_PhaseB_unittests.cpp:77:35: error: aggregate ‘epl::valarray<double> v4’ has incomplete type and cannot be defined
+     valarray <double> v1, v2, v3, v4;
+                                   ^
+Valarray_PhaseB_unittests.cpp:88:25: error: variable ‘epl::valarray<double> ans’ has initializer but incomplete type
+     valarray<double> ans(10);
+                         ^
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseASecret.<censored>
+Valarray_secret_unittests.cpp:29:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(10);
+                    ^
+Valarray_secret_unittests.cpp:30:20: error: variable ‘epl::valarray<int> y’ has initializer but incomplete type
+     valarray<int> y(20);
+                    ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseASecret.<censored>
+Valarray_secret_unittests.cpp:52:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(10);
+                    ^
+Makefile:27: recipe for target 'PHASE_B1_3.tst' failed
+make: *** [PHASE_B1_3.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_AS0_2 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_AS0_2.tst
+Makefile:27: recipe for target 'PHASE_AS0_0.tst' failed
+make: *** [PHASE_AS0_0.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_AS0_3 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_AS0_3.tst
+Makefile:27: recipe for target 'PHASE_AS0_1.tst' failed
+make: *** [PHASE_AS0_1.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_AS0_4 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_AS0_4.tst
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseASecret.<censored>
+Valarray_secret_unittests.cpp:60:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(0);
+                    ^
+Valarray_secret_unittests.cpp:61:20: error: variable ‘epl::valarray<int> y’ has initializer but incomplete type
+     valarray<int> y(0);
+                    ^
+Valarray_secret_unittests.cpp:70:19: error: variable ‘epl::valarray<int> z’ has initializer but incomplete type
+     valarray<int> z = x + y;
+                   ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseASecret.<censored>
+Valarray_secret_unittests.cpp:86:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(0);
+                    ^
+Valarray_secret_unittests.cpp:92:19: error: variable ‘epl::valarray<int> y’ has initializer but incomplete type
+     valarray<int> y = x + 1;
+                   ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseASecret.<censored>
+Valarray_secret_unittests.cpp:108:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(0);
+                    ^
+Valarray_secret_unittests.cpp:114:19: error: variable ‘epl::valarray<int> y’ has initializer but incomplete type
+     valarray<int> y = 1 + x;
+                   ^
+Makefile:27: recipe for target 'PHASE_AS0_2.tst' failed
+make: *** [PHASE_AS0_2.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_AS0_5 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_AS0_5.tst
+Makefile:27: recipe for target 'PHASE_AS0_4.tst' failed
+make: *** [PHASE_AS0_4.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_AS1_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_AS1_0.tst
+Makefile:27: recipe for target 'PHASE_AS0_3.tst' failed
+make: *** [PHASE_AS0_3.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_0.tst
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseASecret.<censored>
+Valarray_secret_unittests.cpp:130:19: error: aggregate ‘epl::valarray<int> x’ has incomplete type and cannot be defined
+     valarray<int> x;
+                   ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:152:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(10);
+                    ^
+Valarray_secret_unittests.cpp:153:23: error: variable ‘epl::valarray<double> y’ has initializer but incomplete type
+     valarray<double> y(10);
+                       ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseASecret.<censored>
+Valarray_secret_unittests.cpp:137:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(10);
+                    ^
+Valarray_secret_unittests.cpp:139:5: error: incomplete type ‘epl::valarray<int>’ used in nested name specifier
+     valarray<int>::iterator ite = x.begin();
+     ^
+Valarray_secret_unittests.cpp:140:12: error: ‘ite’ was not declared in this scope
+     for (; ite != x.end(); ++ite) {
+            ^
+Makefile:27: recipe for target 'PHASE_AS0_5.tst' failed
+make: *** [PHASE_AS0_5.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_1 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_1.tst
+Makefile:27: recipe for target 'PHASE_BS1_0.tst' failed
+make: *** [PHASE_BS1_0.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_2 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_2.tst
+Makefile:27: recipe for target 'PHASE_AS1_0.tst' failed
+make: *** [PHASE_AS1_0.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_3 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_3.tst
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:178:19: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1{5};
+                   ^
+Valarray_secret_unittests.cpp:184:21: error: variable ‘epl::valarray<int> v2’ has initializer but incomplete type
+     valarray<int> v2(5);
+                     ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:209:21: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1(10);
+                     ^
+Valarray_secret_unittests.cpp:210:19: error: variable ‘epl::valarray<int> v2’ has initializer but incomplete type
+     valarray<int> v2 = 4 + v1;
+                   ^
+Valarray_secret_unittests.cpp:213:19: error: variable ‘epl::valarray<int> v3’ has initializer but incomplete type
+     valarray<int> v3 = v2.apply(AddVal<int>(5));
+                   ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:239:21: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1(10);
+                     ^
+Valarray_secret_unittests.cpp:240:19: error: variable ‘epl::valarray<int> v2’ has initializer but incomplete type
+     valarray<int> v2 = 4 + v1;
+                   ^
+Valarray_secret_unittests.cpp:246:19: error: variable ‘epl::valarray<int> v3’ has initializer but incomplete type
+     valarray<int> v3 = v2.apply(MultVal<int>(-2));
+                   ^
+Makefile:27: recipe for target 'PHASE_BS1_1.tst' failed
+make: *** [PHASE_BS1_1.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_4 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_4.tst
+Makefile:27: recipe for target 'PHASE_BS1_3.tst' failed
+make: *** [PHASE_BS1_3.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_5 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_5.tst
+Makefile:27: recipe for target 'PHASE_BS1_2.tst' failed
+make: *** [PHASE_BS1_2.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_6 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_6.tst
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:259:21: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1(10);
+                     ^
+Valarray_secret_unittests.cpp:260:24: error: variable ‘epl::valarray<double> v2’ has initializer but incomplete type
+     valarray<double> v2(5);
+                        ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:276:21: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1(5);
+                     ^
+Valarray_secret_unittests.cpp:277:19: error: variable ‘epl::valarray<int> v2’ has initializer but incomplete type
+     valarray<int> v2 = 4 + v1;
+                   ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:297:21: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1(5);
+                     ^
+Valarray_secret_unittests.cpp:305:19: error: variable ‘epl::valarray<int> v2’ has initializer but incomplete type
+     valarray<int> v2 = v1.sqrt();
+                   ^
+Makefile:27: recipe for target 'PHASE_BS1_4.tst' failed
+make: *** [PHASE_BS1_4.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_7 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_7.tst
+Makefile:27: recipe for target 'PHASE_BS1_5.tst' failed
+make: *** [PHASE_BS1_5.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_8 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_8.tst
+Makefile:27: recipe for target 'PHASE_BS1_6.tst' failed
+make: *** [PHASE_BS1_6.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS1_9 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS1_9.tst
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:315:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(0);
+                    ^
+Valarray_secret_unittests.cpp:316:20: error: variable ‘epl::valarray<int> y’ has initializer but incomplete type
+     valarray<int> y(0);
+                    ^
+Valarray_secret_unittests.cpp:334:19: error: variable ‘epl::valarray<int> z’ has initializer but incomplete type
+     valarray<int> z = x + y;
+                   ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:351:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(0);
+                    ^
+Valarray_secret_unittests.cpp:368:19: error: variable ‘epl::valarray<int> y’ has initializer but incomplete type
+     valarray<int> y = x + 1;
+                   ^
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB1Secret.<censored>
+Valarray_secret_unittests.cpp:384:20: error: variable ‘epl::valarray<int> x’ has initializer but incomplete type
+     valarray<int> x(0);
+                    ^
+Valarray_secret_unittests.cpp:401:19: error: variable ‘epl::valarray<int> y’ has initializer but incomplete type
+     valarray<int> y = 1 + x;
+                   ^
+Makefile:27: recipe for target 'PHASE_BS1_7.tst' failed
+make: *** [PHASE_BS1_7.tst] Error 1
+g++ Valarray_PhaseA_unittests.cpp Valarray_PhaseB_unittests.cpp Valarray_secret_unittests.cpp -DPHASE_BS2_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_BS2_0.tst
+Makefile:27: recipe for target 'PHASE_BS1_8.tst' failed
+make: *** [PHASE_BS1_8.tst] Error 1
+Makefile:27: recipe for target 'PHASE_BS1_9.tst' failed
+make: *** [PHASE_BS1_9.tst] Error 1
+In file included from Valarray_PhaseA_unittests.cpp:13:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_PhaseB_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+In file included from Valarray_secret_unittests.cpp:14:0:
+Valarray.h:27:7: error: ‘epl’ has not been declared
+ using epl::vector; // after submission
+       ^
+Valarray.h:99:37: error: expected template-name before ‘<’ token
+  class valarray : public epl::vector<T>{
+                                     ^
+Valarray.h:99:37: error: expected ‘{’ before ‘<’ token
+Valarray.h:99:37: error: expected unqualified-id before ‘<’ token
+Valarray_secret_unittests.cpp: In member function ‘virtual void PhaseB2Secret.<censored>
+Valarray_secret_unittests.cpp:417:21: error: variable ‘epl::valarray<int> v1’ has initializer but incomplete type
+     valarray<int> v1(5);
+                     ^
+Valarray_secret_unittests.cpp:425:19: error: variable ‘epl::valarray<int> v2’ has initializer but incomplete type
+     valarray<int> v2 = -((v1 * 4).sqrt());
+                   ^
+Valarray_secret_unittests.cpp:431:19: error: variable ‘epl::valarray<int> v3’ has initializer but incomplete type
+     valarray<int> v3 = v1 * ((-((v1 * 4).sqrt())) + v1) / v1;
+                   ^
+Makefile:27: recipe for target 'PHASE_BS2_0.tst' failed
+make: *** [PHASE_BS2_0.tst] Error 1

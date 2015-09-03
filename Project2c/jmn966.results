@@ -1,0 +1,1027 @@
+====== Summary ======
+make: *** [PHASE_C_2.tst] Error 1
+make: *** [PHASE_C_1.tst] Error 1
+make: *** [PHASE_C_0.tst] Error 1
+make: *** [PHASE_C_3.tst] Error 1
+make: *** [PHASE_CS2_1.tst] Error 1
+make: *** [PHASE_CS2_0.tst] Error 1
+make: *** [PHASE_CS2_3.tst] Error 1
+make: *** [PHASE_CS2_4.tst] Error 1
+make: *** [PHASE_CS2_5.tst] Error 1
+
+======= Dump========
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_C_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_C_0.tst
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_C_1 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_C_1.tst
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_C_2 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_C_2.tst
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_basicunittests.cpp: In member function ‘virtual void PhaseC_Iterator_Test::TestBody()’:
+Valarray_PhaseC_basicunittests.cpp:102:5: error: ‘valarray’ was not declared in this scope
+     valarray<int> x(10);
+     ^
+Valarray_PhaseC_basicunittests.cpp:102:14: error: expected primary-expression before ‘int’
+     valarray<int> x(10);
+              ^
+Valarray_PhaseC_basicunittests.cpp:104:20: error: ‘x’ was not declared in this scope
+     for (auto yi : x) {
+                    ^
+Valarray_PhaseC_basicunittests.cpp:108:14: error: expected primary-expression before ‘int’
+     valarray<int>::iterator ite = x.begin();
+              ^
+Valarray_PhaseC_basicunittests.cpp:109:12: error: ‘ite’ was not declared in this scope
+     for (; ite != x.end(); ++ite) {
+            ^
+Valarray_PhaseC_basicunittests.cpp:109:19: error: ‘x’ was not declared in this scope
+     for (; ite != x.end(); ++ite) {
+                   ^
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_basicunittests.cpp: In member function ‘virtual void PhaseC_ApplyAccumulate_Test::TestBody()’:
+Valarray_PhaseC_basicunittests.cpp:130:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> v1(10);
+         ^
+Valarray_PhaseC_basicunittests.cpp:130:18: error: expected primary-expression before ‘int’
+         valarray<int> v1(10);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:131:18: error: expected primary-expression before ‘int’
+         valarray<int> v4 = 4 + v1;
+                  ^
+Valarray_PhaseC_basicunittests.cpp:133:18: error: expected primary-expression before ‘float’
+         valarray<float> v5 = v4.sqrt();
+                  ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:135:28: error: ‘v5’ was not declared in this scope
+             EXPECT_EQ(2.0, v5[i]);
+                            ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:135:13: note: in expansion of macro ‘EXPECT_EQ’
+             EXPECT_EQ(2.0, v5[i]);
+             ^
+Valarray_PhaseC_basicunittests.cpp:140:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> v1(10);
+         ^
+Valarray_PhaseC_basicunittests.cpp:140:18: error: expected primary-expression before ‘int’
+         valarray<int> v1(10);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:141:18: error: expected primary-expression before ‘int’
+         valarray<int> v4 = 4 + v1;
+                  ^
+Valarray_PhaseC_basicunittests.cpp:143:18: error: expected primary-expression before ‘int’
+         valarray<int> v7 = v4.apply(std::negate<int>());
+                  ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:145:19: error: ‘v7’ was not declared in this scope
+         EXPECT_EQ(v7.size(), 10);
+                   ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+../../gtest/include/gtest/gtest.h:1979:32: note: in expansion of macro ‘GTEST_IS_NULL_LITERAL_’
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                ^
+Valarray_PhaseC_basicunittests.cpp:145:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v7.size(), 10);
+         ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:145:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v7.size(), 10);
+         ^
+Valarray_PhaseC_basicunittests.cpp:148:27: error: ‘v7’ was not declared in this scope
+             EXPECT_EQ(-4, v7[i]);
+                           ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:148:13: note: in expansion of macro ‘EXPECT_EQ’
+             EXPECT_EQ(-4, v7[i]);
+             ^
+Valarray_PhaseC_basicunittests.cpp:152:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> v1{1, 2, 3, 4, 5};
+         ^
+Valarray_PhaseC_basicunittests.cpp:152:18: error: expected primary-expression before ‘int’
+         valarray<int> v1{1, 2, 3, 4, 5};
+                  ^
+Valarray_PhaseC_basicunittests.cpp:153:19: error: ‘v1’ was not declared in this scope
+         int sum = v1.accumulate(std::plus<int>());
+                   ^
+Valarray_PhaseC_basicunittests.cpp:158:18: error: expected primary-expression before ‘int’
+         valarray<int> v2{ };
+                  ^
+Valarray_PhaseC_basicunittests.cpp:159:15: error: ‘v2’ was not declared in this scope
+         sum = v2.accumulate(std::plus<int>());
+               ^
+Valarray_PhaseC_basicunittests.cpp:165:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> v1(10);
+         ^
+Valarray_PhaseC_basicunittests.cpp:165:18: error: expected primary-expression before ‘int’
+         valarray<int> v1(10);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:166:18: error: expected primary-expression before ‘int’
+         valarray<int> v2 = 4 + v1;
+                  ^
+Valarray_PhaseC_basicunittests.cpp:168:19: error: ‘InstanceCounter’ has not been declared
+         int cnt = InstanceCounter::counter;
+                   ^
+Valarray_PhaseC_basicunittests.cpp:169:9: error: ‘v2’ was not declared in this scope
+         v2.apply(MultVal<int>(-2));
+         ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:170:24: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+                        ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:170:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:172:18: error: expected primary-expression before ‘int’
+         valarray<int> v3 = v2.apply(MultVal<int>(-2));
+                  ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:173:28: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt + 1, InstanceCounter::counter);
+                            ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:173:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt + 1, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:175:23: error: ‘v3’ was not declared in this scope
+         EXPECT_EQ(10, v3.size());
+                       ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:175:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(10, v3.size());
+         ^
+Valarray_PhaseC_basicunittests.cpp:178:27: error: ‘v3’ was not declared in this scope
+             EXPECT_EQ(-8, v3[i]);
+                           ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:178:13: note: in expansion of macro ‘EXPECT_EQ’
+             EXPECT_EQ(-8, v3[i]);
+             ^
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_basicunittests.cpp: In member function ‘virtual void PhaseC_BasicOperation_Test::TestBody()’:
+Valarray_PhaseC_basicunittests.cpp:37:5: error: ‘valarray’ was not declared in this scope
+     valarray<int> x(10);
+     ^
+Valarray_PhaseC_basicunittests.cpp:37:14: error: expected primary-expression before ‘int’
+     valarray<int> x(10);
+              ^
+Valarray_PhaseC_basicunittests.cpp:38:14: error: expected primary-expression before ‘int’
+     valarray<int> y(20);
+              ^
+Valarray_PhaseC_basicunittests.cpp:41:9: error: ‘x’ was not declared in this scope
+         x.push_back(1);
+         ^
+Valarray_PhaseC_basicunittests.cpp:44:9: error: ‘x’ was not declared in this scope
+         x.pop_back();
+         ^
+Valarray_PhaseC_basicunittests.cpp:47:5: error: ‘x’ was not declared in this scope
+     x = x + y;
+     ^
+Valarray_PhaseC_basicunittests.cpp:47:13: error: ‘y’ was not declared in this scope
+     x = x + y;
+             ^
+Valarray_PhaseC_basicunittests.cpp:60:14: error: expected primary-expression before ‘int’
+     valarray<int> v1(20), v2(20), v3(20), v4(20),
+              ^
+Valarray_PhaseC_basicunittests.cpp:63:9: error: ‘v1’ was not declared in this scope
+         v1[i] = i;
+         ^
+Valarray_PhaseC_basicunittests.cpp:64:9: error: ‘v2’ was not declared in this scope
+         v2[i] = i + 1;
+         ^
+Valarray_PhaseC_basicunittests.cpp:65:9: error: ‘v3’ was not declared in this scope
+         v3[i] = i * 2;
+         ^
+Valarray_PhaseC_basicunittests.cpp:66:9: error: ‘v4’ was not declared in this scope
+         v4[i] = i * 2 + 1;
+         ^
+Valarray_PhaseC_basicunittests.cpp:68:5: error: ‘v5’ was not declared in this scope
+     v5 = v1 + v2;
+     ^
+Valarray_PhaseC_basicunittests.cpp:68:10: error: ‘v1’ was not declared in this scope
+     v5 = v1 + v2;
+          ^
+Valarray_PhaseC_basicunittests.cpp:68:15: error: ‘v2’ was not declared in this scope
+     v5 = v1 + v2;
+               ^
+Valarray_PhaseC_basicunittests.cpp:69:5: error: ‘v6’ was not declared in this scope
+     v6 = v3 - v4;
+     ^
+Valarray_PhaseC_basicunittests.cpp:69:10: error: ‘v3’ was not declared in this scope
+     v6 = v3 - v4;
+          ^
+Valarray_PhaseC_basicunittests.cpp:69:15: error: ‘v4’ was not declared in this scope
+     v6 = v3 - v4;
+               ^
+Valarray_PhaseC_basicunittests.cpp:70:5: error: ‘v7’ was not declared in this scope
+     v7 = v1 * v3;
+     ^
+Valarray_PhaseC_basicunittests.cpp:71:5: error: ‘v8’ was not declared in this scope
+     v8 = v4 / v2;
+     ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:74:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v5[i], v1[i] + v2[i]);
+         ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:75:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v6[i], v3[i] - v4[i]);
+         ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:76:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v7[i], v1[i] * v3[i]);
+         ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:77:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v8[i], v4[i] / v2[i]);
+         ^
+Valarray_PhaseC_basicunittests.cpp:81:14: error: expected primary-expression before ‘int’
+     valarray<int> v9(10), v10(10), v11(10), v12(10);
+              ^
+Valarray_PhaseC_basicunittests.cpp:83:9: error: ‘v9’ was not declared in this scope
+         v9[i] = v2[i];
+         ^
+Valarray_PhaseC_basicunittests.cpp:84:9: error: ‘v10’ was not declared in this scope
+         v10[i] = v4[i];
+         ^
+Valarray_PhaseC_basicunittests.cpp:86:15: error: ‘v9’ was not declared in this scope
+     v5 = v1 + v9;
+               ^
+Valarray_PhaseC_basicunittests.cpp:87:15: error: ‘v10’ was not declared in this scope
+     v6 = v3 - v10;
+               ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:92:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v5[i], v1[i] + v9[i]);
+         ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:93:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v6[i], v3[i] - v10[i]);
+         ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:94:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v7[i], v1[i] * v9[i]);
+         ^
+../../gtest/include/gtest/gtest.h:1979:64: error: template argument 1 is invalid
+                       EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \
+                                                                ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:95:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(v8[i], v10[i] / v4[i]);
+         ^
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+make: *** [PHASE_C_2.tst] Error 1
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_C_3 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_C_3.tst
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+make: *** [PHASE_C_1.tst] Error 1
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_CS2_0 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_CS2_0.tst
+make: *** [PHASE_C_0.tst] Error 1
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_CS2_1 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_CS2_1.tst
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_basicunittests.cpp: In member function ‘virtual void PhaseC_Lazy_Test::TestBody()’:
+Valarray_PhaseC_basicunittests.cpp:187:9: error: ‘valarray’ was not declared in this scope
+         valarray <double> v1, v2, v3, v4;
+         ^
+Valarray_PhaseC_basicunittests.cpp:187:19: error: expected primary-expression before ‘double’
+         valarray <double> v1, v2, v3, v4;
+                   ^
+Valarray_PhaseC_basicunittests.cpp:189:13: error: ‘v1’ was not declared in this scope
+             v1.push_back(1.0);
+             ^
+Valarray_PhaseC_basicunittests.cpp:190:13: error: ‘v2’ was not declared in this scope
+             v2.push_back(1.0);
+             ^
+Valarray_PhaseC_basicunittests.cpp:191:13: error: ‘v3’ was not declared in this scope
+             v3.push_back(1.0);
+             ^
+Valarray_PhaseC_basicunittests.cpp:192:13: error: ‘v4’ was not declared in this scope
+             v4.push_back(1.0);
+             ^
+Valarray_PhaseC_basicunittests.cpp:194:19: error: ‘InstanceCounter’ has not been declared
+         int cnt = InstanceCounter::counter;
+                   ^
+Valarray_PhaseC_basicunittests.cpp:195:9: error: ‘v1’ was not declared in this scope
+         v1 + v2 - (v3 * v4);
+         ^
+Valarray_PhaseC_basicunittests.cpp:195:14: error: ‘v2’ was not declared in this scope
+         v1 + v2 - (v3 * v4);
+              ^
+Valarray_PhaseC_basicunittests.cpp:195:20: error: ‘v3’ was not declared in this scope
+         v1 + v2 - (v3 * v4);
+                    ^
+Valarray_PhaseC_basicunittests.cpp:195:25: error: ‘v4’ was not declared in this scope
+         v1 + v2 - (v3 * v4);
+                         ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:196:24: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+                        ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:196:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:198:18: error: expected primary-expression before ‘double’
+         valarray<double> ans(10);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:199:9: error: ‘ans’ was not declared in this scope
+         ans = v1 + v2 - (v3*v4);
+         ^
+Valarray_PhaseC_basicunittests.cpp:203:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> v1(5);
+         ^
+Valarray_PhaseC_basicunittests.cpp:203:18: error: expected primary-expression before ‘int’
+         valarray<int> v1(5);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:204:9: error: ‘v1’ was not declared in this scope
+         v1 = 4 + v1;
+         ^
+Valarray_PhaseC_basicunittests.cpp:206:19: error: ‘InstanceCounter’ has not been declared
+         int cnt = InstanceCounter::counter;
+                   ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:209:24: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+                        ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:209:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:211:18: error: expected primary-expression before ‘int’
+         valarray<int> v2 = -((v1 * 4).sqrt());
+                  ^
+Valarray_PhaseC_basicunittests.cpp:212:29: error: ‘v2’ was not declared in this scope
+         for (int i = 0; i < v2.size(); ++i) {
+                             ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:215:28: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt + 1, InstanceCounter::counter);
+                            ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:215:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt + 1, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:217:18: error: expected primary-expression before ‘int’
+         valarray<int> v3 = v1 * ((-((v1 * 4).sqrt())) + v1) / v1;
+                  ^
+Valarray_PhaseC_basicunittests.cpp:218:29: error: ‘v3’ was not declared in this scope
+         for (int i = 0; i < v3.size(); ++i) {
+                             ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:221:28: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt + 2, InstanceCounter::counter);
+                            ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:221:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt + 2, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:224:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> v1(5);
+         ^
+Valarray_PhaseC_basicunittests.cpp:224:18: error: expected primary-expression before ‘int’
+         valarray<int> v1(5);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:225:18: error: expected primary-expression before ‘int’
+         valarray<int> v2 = 4 + v1;
+                  ^
+Valarray_PhaseC_basicunittests.cpp:228:13: error: ‘v1’ was not declared in this scope
+             v1[i] = i;
+             ^
+Valarray_PhaseC_basicunittests.cpp:231:19: error: ‘InstanceCounter’ has not been declared
+         int cnt = InstanceCounter::counter;
+                   ^
+Valarray_PhaseC_basicunittests.cpp:232:19: error: ‘v1’ was not declared in this scope
+         int sum = v1.sum();
+                   ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:234:24: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+                        ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:234:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:236:21: error: ‘v2’ was not declared in this scope
+         sum = (v1 + v2).sum();
+                     ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:238:24: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+                        ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:238:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:241:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> v1(5);
+         ^
+Valarray_PhaseC_basicunittests.cpp:241:18: error: expected primary-expression before ‘int’
+         valarray<int> v1(5);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:242:9: error: ‘v1’ was not declared in this scope
+         v1 = 4 + v1;
+         ^
+Valarray_PhaseC_basicunittests.cpp:244:19: error: ‘InstanceCounter’ has not been declared
+         int cnt = InstanceCounter::counter;
+                   ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:247:24: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+                        ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:247:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp:249:18: error: expected primary-expression before ‘int’
+         valarray<int> v2 = v1.sqrt();
+                  ^
+Valarray_PhaseC_basicunittests.cpp:250:29: error: ‘v2’ was not declared in this scope
+         for (int i = 0; i < v2.size(); ++i) {
+                             ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:253:28: error: ‘InstanceCounter’ has not been declared
+         EXPECT_EQ(cnt + 1, InstanceCounter::counter);
+                            ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:253:9: note: in expansion of macro ‘EXPECT_EQ’
+         EXPECT_EQ(cnt + 1, InstanceCounter::counter);
+         ^
+Valarray_PhaseC_basicunittests.cpp: In member function ‘virtual void PhaseC_ValarrayToScalarOp_Test::TestBody()’:
+Valarray_PhaseC_basicunittests.cpp:261:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> x(0);
+         ^
+Valarray_PhaseC_basicunittests.cpp:261:18: error: expected primary-expression before ‘int’
+         valarray<int> x(0);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:264:13: error: ‘x’ was not declared in this scope
+             x.push_back(1);
+             ^
+Valarray_PhaseC_basicunittests.cpp:267:18: error: expected primary-expression before ‘int’
+         valarray<int> y = x + 1;
+                  ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:268:53: error: ‘y’ was not declared in this scope
+         for (int i = 0; i < 10; i++) { EXPECT_EQ(2, y[i]); }
+                                                     ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:268:40: note: in expansion of macro ‘EXPECT_EQ’
+         for (int i = 0; i < 10; i++) { EXPECT_EQ(2, y[i]); }
+                                        ^
+Valarray_PhaseC_basicunittests.cpp:270:9: error: ‘y’ was not declared in this scope
+         y = x - 1;
+         ^
+Valarray_PhaseC_basicunittests.cpp:270:13: error: ‘x’ was not declared in this scope
+         y = x - 1;
+             ^
+Valarray_PhaseC_basicunittests.cpp:281:9: error: ‘valarray’ was not declared in this scope
+         valarray<int> x(0);
+         ^
+Valarray_PhaseC_basicunittests.cpp:281:18: error: expected primary-expression before ‘int’
+         valarray<int> x(0);
+                  ^
+Valarray_PhaseC_basicunittests.cpp:284:13: error: ‘x’ was not declared in this scope
+             x.push_back(1);
+             ^
+Valarray_PhaseC_basicunittests.cpp:287:18: error: expected primary-expression before ‘int’
+         valarray<int> y = 1 + x;
+                  ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_basicunittests.cpp:15:
+Valarray_PhaseC_basicunittests.cpp:288:53: error: ‘y’ was not declared in this scope
+         for (int i = 0; i < 10; i++) { EXPECT_EQ(2, y[i]); }
+                                                     ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_basicunittests.cpp:288:40: note: in expansion of macro ‘EXPECT_EQ’
+         for (int i = 0; i < 10; i++) { EXPECT_EQ(2, y[i]); }
+                                        ^
+Valarray_PhaseC_basicunittests.cpp:290:9: error: ‘y’ was not declared in this scope
+         y = 1 - x;
+         ^
+Valarray_PhaseC_basicunittests.cpp:290:17: error: ‘x’ was not declared in this scope
+         y = 1 - x;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+make: *** [PHASE_C_3.tst] Error 1
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_CS2_3 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_CS2_3.tst
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+make: *** [PHASE_CS2_1.tst] Error 1
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_CS2_4 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_CS2_4.tst
+make: *** [PHASE_CS2_0.tst] Error 1
+g++ Valarray_PhaseC_basicunittests.cpp Valarray_PhaseC_unittests.cpp -DPHASE_CS2_5 ../../gtest/lib/gtest64.a -I ../../gtest/include -std=c++11 -fpermissive  -pthread -o PHASE_CS2_5.tst
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_basicunittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_basicunittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_basicunittests.cpp:31:5: error: ‘InstanceCounter’ has not been declared
+ int InstanceCounter::counter = 0;
+     ^
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_unittests.cpp:81:21: error: ‘valarray’ does not name a type
+ int operator+(const valarray<int>&, char) {
+                     ^
+Valarray_PhaseC_unittests.cpp:81:29: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int operator+(const valarray<int>&, char) {
+                             ^
+Valarray_PhaseC_unittests.cpp:81:41: error: ‘int operator+(int)’ must have an argument of class or enumerated type
+ int operator+(const valarray<int>&, char) {
+                                         ^
+Valarray_PhaseC_unittests.cpp:84:21: error: ‘valarray’ does not name a type
+ int operator-(const valarray<int>& v, char c) {
+                     ^
+Valarray_PhaseC_unittests.cpp:84:29: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int operator-(const valarray<int>& v, char c) {
+                             ^
+Valarray_PhaseC_unittests.cpp:84:45: error: ‘int operator-(int)’ must have an argument of class or enumerated type
+ int operator-(const valarray<int>& v, char c) {
+                                             ^
+Valarray_PhaseC_unittests.cpp:87:21: error: ‘valarray’ does not name a type
+ int operator*(const valarray<int>& v, char c) {
+                     ^
+Valarray_PhaseC_unittests.cpp:87:29: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int operator*(const valarray<int>& v, char c) {
+                             ^
+Valarray_PhaseC_unittests.cpp:87:45: error: ‘int operator*(int)’ must have an argument of class or enumerated type
+ int operator*(const valarray<int>& v, char c) {
+                                             ^
+Valarray_PhaseC_unittests.cpp:90:21: error: ‘valarray’ does not name a type
+ int operator/(const valarray<int>& v, char c) {
+                     ^
+Valarray_PhaseC_unittests.cpp:90:29: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int operator/(const valarray<int>& v, char c) {
+                             ^
+Valarray_PhaseC_unittests.cpp:90:45: error: ‘int operator/(int)’ must have an argument of class or enumerated type
+ int operator/(const valarray<int>& v, char c) {
+                                             ^
+Valarray_PhaseC_unittests.cpp: In member function ‘virtual void PhaseCS_SFINAE_V2C_Test::TestBody()’:
+Valarray_PhaseC_unittests.cpp:95:5: error: ‘valarray’ was not declared in this scope
+     valarray<int> v(10);
+     ^
+Valarray_PhaseC_unittests.cpp:95:14: error: expected primary-expression before ‘int’
+     valarray<int> v(10);
+              ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_unittests.cpp:15:
+Valarray_PhaseC_unittests.cpp:96:20: error: ‘v’ was not declared in this scope
+     EXPECT_EQ(314, v / 'A' );
+                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_unittests.cpp:96:5: note: in expansion of macro ‘EXPECT_EQ’
+     EXPECT_EQ(314, v / 'A' );
+     ^
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_unittests.cpp:101:21: error: ‘valarray’ does not name a type
+ int operator+(const valarray<int>& v, const Foo& foo) {
+                     ^
+Valarray_PhaseC_unittests.cpp:101:29: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int operator+(const valarray<int>& v, const Foo& foo) {
+                             ^
+Valarray_PhaseC_unittests.cpp:101:53: error: ‘int operator+(int)’ must have an argument of class or enumerated type
+ int operator+(const valarray<int>& v, const Foo& foo) {
+                                                     ^
+Valarray_PhaseC_unittests.cpp:104:21: error: ‘valarray’ does not name a type
+ int operator-(const valarray<int>& v, const Foo& foo) {
+                     ^
+Valarray_PhaseC_unittests.cpp:104:29: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int operator-(const valarray<int>& v, const Foo& foo) {
+                             ^
+Valarray_PhaseC_unittests.cpp:104:53: error: ‘int operator-(int)’ must have an argument of class or enumerated type
+ int operator-(const valarray<int>& v, const Foo& foo) {
+                                                     ^
+Valarray_PhaseC_unittests.cpp:107:21: error: ‘valarray’ does not name a type
+ int operator*(const valarray<int>& v, const Foo& foo) {
+                     ^
+Valarray_PhaseC_unittests.cpp:107:29: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int operator*(const valarray<int>& v, const Foo& foo) {
+                             ^
+Valarray_PhaseC_unittests.cpp:107:53: error: ‘int operator*(int)’ must have an argument of class or enumerated type
+ int operator*(const valarray<int>& v, const Foo& foo) {
+                                                     ^
+Valarray_PhaseC_unittests.cpp:110:21: error: ‘valarray’ does not name a type
+ int operator/(const valarray<int>& v, const Foo& foo) {
+                     ^
+Valarray_PhaseC_unittests.cpp:110:29: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int operator/(const valarray<int>& v, const Foo& foo) {
+                             ^
+Valarray_PhaseC_unittests.cpp:110:53: error: ‘int operator/(int)’ must have an argument of class or enumerated type
+ int operator/(const valarray<int>& v, const Foo& foo) {
+                                                     ^
+Valarray_PhaseC_unittests.cpp: In member function ‘virtual void PhaseCS_SFINAE_V2E_Test::TestBody()’:
+Valarray_PhaseC_unittests.cpp:115:5: error: ‘valarray’ was not declared in this scope
+     valarray<int> v(10);
+     ^
+Valarray_PhaseC_unittests.cpp:115:14: error: expected primary-expression before ‘int’
+     valarray<int> v(10);
+              ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_unittests.cpp:15:
+Valarray_PhaseC_unittests.cpp:117:20: error: ‘v’ was not declared in this scope
+     EXPECT_EQ(315, v / bar );
+                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_unittests.cpp:117:5: note: in expansion of macro ‘EXPECT_EQ’
+     EXPECT_EQ(315, v / bar );
+     ^
+Valarray_PhaseC_unittests.cpp:22:17: error: ‘epl’ is not a namespace-name
+ using namespace epl;
+                 ^
+Valarray_PhaseC_unittests.cpp:22:20: error: expected namespace-name before ‘;’ token
+ using namespace epl;
+                    ^
+Valarray_PhaseC_unittests.cpp: In member function ‘virtual void PhaseCS_SFINAE_V2I_Test::TestBody()’:
+Valarray_PhaseC_unittests.cpp:123:5: error: ‘valarray’ was not declared in this scope
+     valarray<int> v(10);
+     ^
+Valarray_PhaseC_unittests.cpp:123:14: error: expected primary-expression before ‘int’
+     valarray<int> v(10);
+              ^
+In file included from ../../gtest/include/gtest/gtest.h:1929:0,
+                 from Valarray_PhaseC_unittests.cpp:15:
+Valarray_PhaseC_unittests.cpp:124:20: error: ‘v’ was not declared in this scope
+     EXPECT_EQ(65, (v + (int) 'A')[0] );
+                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:77:52: note: in definition of macro ‘GTEST_ASSERT_’
+   if (const ::testing::AssertionResult gtest_ar = (expression)) \
+                                                    ^
+../../gtest/include/gtest/gtest_pred_impl.h:162:3: note: in expansion of macro ‘GTEST_PRED_FORMAT2_’
+   GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)
+   ^
+../../gtest/include/gtest/gtest.h:1978:3: note: in expansion of macro ‘EXPECT_PRED_FORMAT2’
+   EXPECT_PRED_FORMAT2(::testing::internal:: \
+   ^
+Valarray_PhaseC_unittests.cpp:124:5: note: in expansion of macro ‘EXPECT_EQ’
+     EXPECT_EQ(65, (v + (int) 'A')[0] );
+     ^
+make: *** [PHASE_CS2_3.tst] Error 1
+make: *** [PHASE_CS2_4.tst] Error 1
+make: *** [PHASE_CS2_5.tst] Error 1
